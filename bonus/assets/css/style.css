@@ -3,14 +3,56 @@ body {
   font-size: 18px;
   line-height: 34px;
   color: #777;
-  background: url("../images/white_wall.png");
+  background: url("../images/concrete_seamless.png");
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
-/* general */
+/* sticky footer styling */
+
+/* http://ryanfait.com/html5-sticky-footer/ */
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto -105px;
+}
+
+footer,
+.push {
+  height: 105px;
+}
+
+/* end sticky footer styling */
+
+/* start hover styling */
+
+#logo:hover,
+input[type=submit]:hover {
+  background: #5e7f7e;
+}
+
+nav a:hover {
+  color: #5e7f7e;
+}
+
+.social:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* end hover styling */
+
+/* general styling */
 
 .container {
   width: 100%;
@@ -156,48 +198,6 @@ h3,
   border: 1px solid #ddd;
 }
 
-/* portfolio page */
-
-.work {
-  position: relative;
-  float: left;
-  width: 274px;
-  margin: 20px 0 25px;
-  overflow: auto;
-}
-
-.work:nth-child(even) {
-  margin-right: 40px;
-}
-
-.work img {
-  width: 100%;
-  border: 0 none;
-  opacity: 0.8;
-}
-
-.work h3 {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 0;
-  font-weight: 300;
-  line-height: 30px;
-  color: #fff;
-  text-align: center;
-  background: #4aaaa5;
-  border-bottom: 0;
-}
-
-.auth-image {
-  float: left;
-  width: 200px;
-  height: auto;
-  margin-top: 10px;
-  margin-right: 25px;
-}
-
 /* contact page */
 
 #contact-form ul {
@@ -236,85 +236,4 @@ input[type=submit] {
   cursor: pointer;
   background: #4aaaa5;
   border: 0 none;
-}
-
-@media screen and (max-width: 980px) {
-  /* The body's bg color will be #333 */
-  nav {
-    float: right;
-  }
-
-  .main-section {
-    max-width: 550px;
-    margin-left: 40px;
-  }
-
-  .sidebar{
-    float: left;
-    max-width: 260px;
-    margin-left: 55px;
-}
-.work {
-      width: 100%;
-
-}
-
-
-}
-
-@media only screen and (max-width: 768px){
-    nav {
-      float: right;
-    }
-
-    .main-section {
-    max-width: 680px;
-  
-    }
-
-    .sidebar {
-         float: left;
-         margin-left: 40px;
-         max-width: 680px;
-    }
-
-    .work {
-      margin-left: 10px;
-    }
-}
-
-@media only screen and (max-width: 640px) {
-#logo {
-  width: 100%;
-
-}
-
- nav a {
-       margin-left: 15px;
-       line-height: 18px;
-       text-decoration: none;
-       border-left: 1px solid #efefef;
-       margin-right: 100px;
- }
-
-
-  
-
-  .main-section {
-  max-width: 590px;
-    margin-left: 20px;
-  }
-  .sidebar {
-    float: left;
-    margin-left: 20px;
-    max-width: 590px;;
-  }
-  .work {
-    margin-left: 10px;
-    width: 100%;
-  }
- .auth-image {
-   width: 100%;
-   height: auto;
- } 
 }
